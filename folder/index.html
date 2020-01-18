@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>ADMIN TEMPLATE</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body{
+  margin: 0px;
+  border: 0px;
+}
+
+.head{
+  dsiplay: flex;
+  align-content: flex-start;
+  background-color: brown;
+  height: 100px;
+  color: white;
+}
+.search{
+  display: flex;
+  justify-content: flex-end;
+  height: 100px;
+}
+.search a {
+  color: white;
+}
+.search a:hover {
+  background-color: red;
+}
+.searchTerm {
+  border: 3px solid black;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+.searchButton {
+  width: 40px;
+  height: 20px;
+  border: 1px solid black;
+  background: white;
+  text-align: center;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+#h1 {
+  padding-top: 30px
+}
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.side {
+  flex: 20%;
+  flex-direction: row;
+  flex-basis: 100px;
+  background-color: black;
+  padding: 50px;
+  height: 950px;
+}
+/* Style the navigation bar links */
+.side a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+/*Style the icon*/
+.side i {
+  color: white;
+}
+/* Change color on hover */
+.side a:hover {
+  background-color: red;
+
+}
+
+/* Main column */
+.main {
+  flex: 80%;
+  background-color: white;
+  padding: 10px;
+}
+@media screen and (max-width: 500px) {
+  .main {
+      display: flex;
+      background-color: gray;
+      flex-direction: column;
+
+  }
+}
+h4{
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+.form1 {
+ display: flex;
+ flex-direction: column;
+ align-content: center;
+ width: 400px;
+ background-color: brown;
+ padding: 40px 20px;
+ box-sizing: border-box;
+}
+.form2 {
+ display: flex;
+ flex-direction: column;
+ align-content: center;
+ width: 400px;
+ background-color: brown;
+ padding: 40px 20px;
+ box-sizing: border-box;
+}
+input{
+  padding: 10px;
+  font-size: inherit;
+}
+input[type="text"] {
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 2px solid steelblue;
+}
+input[type="email"] {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 2px solid steelblue;
+}
+input[type="password"] {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 2px solid steelblue;
+}
+input[type="button"] {
+  background-color: steelblue;
+  color: white;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  height: 50px;
+}
+.card{
+     width: 20%;
+     display: inline-block;
+     background-color: steelblue;
+     #box-shadow: 2px 2px 20px black;
+     border-radius: 0px;
+     margin: 2%;
+    }
+
+div.title{
+
+  text-align: left;
+  padding-bottom: 10px;
+  color: white;
+ }
+div.title i {
+  margin-left: 250px;
+
+}
+h1{
+  font-size: 40px;
+ }
+
+.des{
+  padding: 3px;
+  text-align: center;
+  padding-top: 1px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #BBDCF8;
+}
+.des a {
+  color: white;
+}
+.content-table {
+  border-collapse: collapse;
+  margin-top: 25px;
+  margin-left: 20px;
+  font-size: 0.9em;
+  min-width: 955px;
+  #border-radius: 5px 5px 0 0;
+  #overflow: hidden;
+  #box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 767px) {
+    .content-table {
+      display: block;
+      width: 100%;
+    }
+}
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+</style>
+</head>
+
+<body>
+<header class="head">
+<h2 id="h1">ADMIN</h2>
+<div class="search">
+     <input type="search" placeholder="Search.." name="search" class="searchTerm">
+     <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+   <a href="#"><i class="fa fa-bell fa-fw"></i></a> &nbsp;
+   <a href="#"><i class="fa fa-user-circle fa-fw"></i></a> &nbsp;
+   <a href="#"><i class="fa fa-envelope fa-fw"></i></a>
+</div>
+</header>
+<div class="row">
+  <div class="side">
+
+    <p><h4 style=""><a href="admintemplate.html"><i class="fa fa-dashboard"></i>Dashboard</a></h4>
+    </p><p>
+    <h4 style=""><a href="pages.html"><i class="fa fa-folder-open-o"></i>Pages</a></h4>
+  </p><p>
+    <h4><a href="#"><i class="fa fa-bar-chart"></i>Charts</a></h4>
+  </p><p>
+    <h4><a href="#"><i class="fa fa-table"></i>Tables</a></h4>
+  </p>
+  </div>
+  <div class="main">
+    <h2>Dashboard/Overview</h2>
+    <hr>
+
+    <div class="card" style="background-color:red;">
+
+    <div class="title">
+
+     <h1>
+    374</h1>
+    <p>
+   Transitions</p>
+    </div>
+
+
+
+  <div class="des" style="background-color:#F6968E;">
+    <a href="#">More Info...<i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+    </div>
+    <div class="card">
+
+    <div class="title">
+
+     <h1>
+    3</h1>
+    <p>
+   Agent</p>
+    </div>
+
+
+
+  <div class="des">
+    <a href="#">More Info...<i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+    </div>
+    <div class="card" style="background-color: green;">
+
+    <div class="title">
+
+     <h1>
+    4</h1>
+    <p>
+   Customers</p>
+    </div>
+
+
+
+  <div class="des" style="background-color:#8EF6A5;">
+    <a href="#">More Info...<i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+    </div>
+    <div class="card" style="background-color: #5A2022;">
+
+    <div class="title">
+
+     <h1>
+    37</h1>
+    <p>
+   Bad Loans</p>
+    </div>
+
+
+
+  <div class="des" style="background-color: #B2AAAA;">
+    <a href="#">More Info...<i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+    </div>
+    <table class="content-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Points</th>
+      <th>Team</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Domenic</td>
+      <td>88,110</td>
+      <td>dcode</td>
+    </tr>
+    <tr class="active-row">
+      <td>2</td>
+      <td>Sally</td>
+      <td>72,400</td>
+      <td>Students</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Nick</td>
+      <td>52,300</td>
+      <td>dcode</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Nicky</td>
+      <td>52,300</td>
+      <td>dcode</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Nike</td>
+      <td>52,300</td>
+      <td>dcode</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+<footer>
+  <h3 style="color: white;">
+  Copyrights 2019
+</h3>
+</footer>
+</body>
+</html>
